@@ -202,3 +202,55 @@
     height: 30px;
   }
 }
+/* ================= Responsive Section Padding ================= */
+
+/* Default desktop padding */
+section {
+  padding: 80px 0; /* 80px top & bottom */
+}
+
+/* Large tablets / small desktops */
+@media (max-width: 992px) {
+  section {
+    padding: 60px 0; /* reduced for medium screens */
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 576px) {
+  section {
+    padding: 40px 0; /* compact padding for small screens */
+  }
+
+  /* About section image/content spacing */
+  .about-img,
+  .about-content {
+    margin-bottom: 20px;
+  }
+
+  /* Service cards */
+  .service-card {
+    padding: 20px;
+  }
+
+  /* Testimonials */
+  .testimonial {
+    padding: 15px;
+    min-width: 250px;
+  }
+
+  /* Hero section text adjustments */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  /* Buttons smaller */
+  .btn-gold {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
+
