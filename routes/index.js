@@ -130,6 +130,7 @@ router.post("/order", isLoggedIn, async (req, res) => {
 const products = [
   // Category: giftbox
   { name: "Luxury Gift Box", category: "giftbox", images: ["/images/trans.png","/images/giftbox.png","/images/Untitled (300 x 300 px) (3).png","/images/Birthday Surprise Box2.png"], description: "Handcrafted premium gift box" },
+  { name: "Photo Frame", category: "photoframe", images: ["/images/Brown Colorful Travel Photo Collage.png","/images/Mini Frame3.png","/images/table frame.jpg","/images/night frame.jpg"], description: "Handcrafted premium photo frame" },
   { name: "Birthday Surprise Box", category: "giftbox", images: ["/images/Birthday Box1.png","/images/kostiantyn-li-xKggi7Gtfs4-unsplash.jpg","/images/kostiantyn-li-xKggi7Gtfs4-unsplash.jpg","/images/Birthday Box1.png"], description: "Perfect birthday gift" },
   // Category: decor
   { name: "Resin Wall Art", category: "decor", images: ["/images/Macrame Wall Hanging.png","/images/Macrame Wall Hanging1.png","/images/Macrame Wall Hanging3.png"], description: "Elegant decor for your home" },
