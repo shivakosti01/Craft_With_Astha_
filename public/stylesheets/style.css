@@ -4,6 +4,12 @@
     text-align: center;
     padding-top: 50px;
   }
+ .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+.navbar-toggler-icon {
+  color: white;
+}
 
   footer .row {
     display: flex;
