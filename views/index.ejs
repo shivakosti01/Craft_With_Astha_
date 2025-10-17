@@ -162,82 +162,9 @@ section, footer, nav, .container {
     }
 
     /* About */
-:root {
-    --gold: #FFD700;
-  }
-
-  /* About Section Base */
-  .about-img img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(255,215,0,0.2);
-    display: block;
-    margin: 0 auto;
-  }
-
-  .about-content h3 {
-    color: var(--gold);
-    font-family: 'Caveat', cursive;
-    font-size: 2rem;
-    margin-bottom: 15px;
-  }
-
-  .about-content p {
-    color: #ccc;
-    margin-top: 15px;
-    line-height: 1.7;
-  }
-
-  .btn-gold {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 25px;
-    background-color: var(--gold);
-    color: #000;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-
-  .btn-gold:hover {
-    background-color: #e6c200;
-    transform: translateY(-2px);
-  }
-
-  /* Responsive */
-  @media (max-width: 992px) {
-    .row.g-5 {
-      flex-direction: column-reverse;
-      text-align: center;
-    }
-
-    .about-content h3 {
-      font-size: 1.8rem;
-    }
-
-    .about-content p {
-      font-size: 0.95rem;
-    }
-
-    .btn-gold {
-      padding: 8px 20px;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .about-content h3 {
-      font-size: 1.5rem;
-    }
-
-    .about-content p {
-      font-size: 0.9rem;
-    }
-
-    .about-img img {
-      max-width: 300px;
-    }
-  }
+    .about-img img { width:400px; border-radius: 20px; box-shadow: 0 0 20px rgba(255,215,0,0.2); }
+    .about-content h3 { color: var(--gold); font-family: 'Caveat', cursive; font-size: 2rem; }
+    .about-content p { color: #ccc; margin-top: 15px; line-height: 1.7; }
 
     /* Services */
     .service-card {
@@ -661,7 +588,147 @@ hr {
 
 
 /* --------------------------------------------------------------------------- */
-  
+  /* ABOUT SECTION */
+
+:root {
+    --gold: #FFD700;
+  }
+
+  /* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ================= Responsive Section Padding ================= */
+
+/* Default desktop padding */
+section {
+  padding: 80px 0; /* 80px top & bottom */
+}
+
+/* Large tablets / small desktops */
+@media (max-width: 992px) {
+  section {
+    padding: 60px 0; /* reduced for medium screens */
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 576px) {
+  section {
+    padding: 40px 0; /* compact padding for small screens */
+  }
+
+  /* About section image/content spacing */
+  .about-img,
+  .about-content {
+    margin-bottom: 20px;
+  }
+
+  /* Service cards */
+  .service-card {
+    padding: 20px;
+  }
+
+  /* Testimonials */
+  .testimonial {
+    padding: 15px;
+    min-width: 250px;
+  }
+
+  /* Hero section text adjustments */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  /* Buttons smaller */
+  .btn-gold {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+  :root {
+    --gold: #FFD700;
+  }
+
+  /* About Section Base */
+  .about-img img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255,215,0,0.2);
+    display: block;
+    margin: 0 auto;
+  }
+
+  .about-content h3 {
+    color: var(--gold);
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .about-content p {
+    color: #ccc;
+    margin-top: 15px;
+    line-height: 1.7;
+  }
+
+  .btn-gold {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: var(--gold);
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-gold:hover {
+    background-color: #e6c200;
+    transform: translateY(-2px);
+  }
+
+  /* Stack vertically on mobile */
+  @media (max-width: 992px) {
+    .row.g-5 {
+      flex-direction: column; /* stack image above content */
+      text-align: center;
+    }
+
+    .about-content h3 {
+      font-size: 1.8rem;
+    }
+
+    .about-content p {
+      font-size: 0.95rem;
+    }
+
+    .btn-gold {
+      padding: 8px 20px;
+    }
+
+    .about-img {
+      margin-bottom: 20px; /* space between image and content */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .about-content h3 {
+      font-size: 1.5rem;
+    }
+
+    .about-content p {
+      font-size: 0.9rem;
+    }
+
+    .about-img img {
+      max-width: 300px;
+    }
+  }
+
   </style>
 </head>
 <body>
@@ -747,20 +814,31 @@ hr {
 
 
 
+
 <!-- About Section -->
 <section id="about">
   <div class="container">
-    <div class="about-img">
-      <img src="/images/jasmin-schreiber-JE4iHJE-knI-unsplash.jpg" alt="Craft Studio">
-    </div>
-    <div class="about-content">
-      <h3>Where Creativity Meets Craftsmanship</h3>
-      <p>At The Craft Studio, every product is a reflection of passion and patience. From intricate handmade décor to personalized gifts, we design each creation to bring warmth, beauty, and joy to your space.</p>
-      <p>We believe that art has the power to tell stories — and your story deserves a masterpiece.</p>
-      <a href="/about" class="btn-gold">Explore More</a>
+    <div class="row g-5 align-items-center">
+      <div class="col-md-6 about-img">
+        <img src="/images/jasmin-schreiber-JE4iHJE-knI-unsplash.jpg" alt="Craft Studio">
+      </div>
+      <div class="col-md-6 about-content">
+        <h3>Where Creativity Meets Craftsmanship</h3>
+        <p>At The Craft Studio, every product is a reflection of passion and patience. From intricate handmade décor to personalized gifts, we design each creation to bring warmth, beauty, and joy to your space.</p>
+        <p>We believe that art has the power to tell stories — and your story deserves a masterpiece.</p>
+        <a href="/about" class="btn-gold">Explore More</a>
+      </div>
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
   <!-- Services -->
   <section id="services" class="text-center">
     <h2 class="section-title">Our Services</h2>
@@ -777,7 +855,7 @@ hr {
   <section id="gallery" class="text-center">
     <h2 class="section-title">Gallery</h2>
     <div class="container gallery">
-      <div class="gallery-item">  <a href="/products"><img src="/images/pppp.png" alt=""></div></a>
+    <div class="gallery-item">  <a href="/products"><img src="/images/pppp.png" alt=""></div></a>
       <div class="gallery-item" > <a href="/products"><img src="/images/lamp.png" alt=""></div></a>
       <div class="gallery-item"><a href="/products"><img src="/images/giftbox.png" alt=""></div></a>
      <div class="gallery-item"><a href="/products"></a><img src="/images/name chain.png" alt=""></div></a>
